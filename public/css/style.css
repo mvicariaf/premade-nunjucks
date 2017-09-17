@@ -29,6 +29,10 @@ body{
     color: #fff;
     height: 40%;
 }
+#grupos{
+	margin-top: 50px;
+}
+
 .imgNavBar{
 	height: 40px;
 	width: 43px;
@@ -107,6 +111,7 @@ aside{
 .list-group{
 	margin-left: 50px;
 	margin-bottom: 10px;
+
 	width: 100%;
 }
 .list-group a:hover {
@@ -115,6 +120,7 @@ aside{
 .list-group-item{
 	background-color: transparent;
 	color: #fff;
+	margin-top: 5px;
 }
 
 .loggin{

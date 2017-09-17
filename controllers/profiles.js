@@ -38,8 +38,10 @@ function saveProfile (req, res) {
 	profile.save((err, profileStored) => {
 		if (err) res.status(500).send({message: `Error al salvar en la base de datos ${err}`})
 
-		res.status(200).send({profile: profileStored})
+		res.status(200).send({profile: profileStored}) 
+
 	})
+	res.render('profile.html')
 }
 
 function updateProfile(req, res) {
@@ -71,10 +73,10 @@ function login (req, res){
 	let password = req.body.password
 	Profile.findOne({ 'name': name}, (err, profile) => {
 		
-		if (password ==  profile.password && name == profile.name)	return res.render('loged.html')
+		if (password ==  profile.password && name == profile.name)	return res.redirect(`/login/${profile.name}`)
 		
 
-		if (err) return res.status(500).send({message: `Usuario no válido: ${err}`})
+		if (err) return res.status(404).send({message: `Usuario no válido: ${err}`})
 	})
 
 }
