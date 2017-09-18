@@ -2,7 +2,9 @@
 			
 				
 	
-				  <h2 id="welcome"><script>document.getElementById('welcome').append("Bienvenido "+window.location.href.split('/')[4])</script></h2>
+				  <h2 id="welcome"><script>
+				  var nickname = window.location.href.split('/')[4];
+				  document.getElementById('welcome').append("Bienvenido "+nickname)</script></h2>
 				  
 				  <button class="btn "><a href="/">Logout</a></button>		
 			

@@ -9,15 +9,22 @@ body{
 	margin: 0 auto;
 	position: relative;
 	background-color: #162C44;
-	
 	height: -webkit-fill-available;
+	
+}
+#mail-loged{
+	width: 1070px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #162C44;
+	height: 100%;
 }
 #main-singup{
 	width: 1070px;
     margin: 0 auto;
     position: relative;
     background-color: #162C44;
-    height: -webkit-fill-available;
+    
 
 }
 #center-signup{
@@ -102,7 +109,7 @@ aside{
 	color: #fff;
 }
 #center {
-	width: 700px;
+	width: 100%;
 	min-width: 700px;
 	max-width: 700px;
 	display: inline-block;

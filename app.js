@@ -59,7 +59,12 @@ app.get('/login/:name', (req, res) => {
 });
 //form routes
 app.post('/singup', productCtrl.saveProfile)
-/*app.post('/login', productCtrl.login)*/
+app.get('/login/:name/newgroup', (req, res) =>{
+    res.render('newgroup.html')
+})
+app.get('/login/:name/lol', (req, res) =>{
+    res.render('lol1.html')
+})
 
 module.exports = app
 

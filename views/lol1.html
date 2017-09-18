@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	{% block css %}
+	 	{% include "includes/css2.html" %}
+	{% endblock %}
+</head>
+<body>
+	<div id="main">
+			{% block header %}
+				{% include "includes/header2.html" %}
+			{% endblock %}
+			
+			<section id="grupos">
+				<h2>League of legends</h2>
+				<h3>Grupos</h3>
+					<div class="list-group col-11">
+					  <a href="#" class="list-group-item list-group-item-action"> asdasd </a>
+					  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+					  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+					  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+					  <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+					</div>
+				</section>
+
+			
+			
+	</div>
+	{% block footer %}
+		{% include "includes/footer.html" %}
+	{% endblock %}
+  	
+	<!--links jquery & bootstrap -->
+	{% block js %}
+		{% include "includes/js2.html" %}
+	{% endblock %}
+</body>
+</html>
