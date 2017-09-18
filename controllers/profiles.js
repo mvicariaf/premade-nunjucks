@@ -39,9 +39,9 @@ function saveProfile (req, res) {
 		if (err) res.status(500).send({message: `Error al salvar en la base de datos ${err}`})
 
 		res.status(200).send({profile: profileStored}) 
-
+		res.redirect(`/login/${profile.name}`)
 	})
-	res.render('profile.html')
+	
 }
 
 function updateProfile(req, res) {
