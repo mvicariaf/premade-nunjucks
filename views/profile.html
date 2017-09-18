@@ -1,16 +1,19 @@
 <html>
 <head>
     <title>Node Authentication</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+   {% block css %}
+        {% include "includes/css1.html" %}
+    {% endblock %}
     
 </head>
 <body>
 <div class="container">
-
+    {% block header %}
+        {% include "includes/header1.html" %}
+    {% endblock %}
     <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <h1> Profile Page</h1>
+        <a href="/" class="btn btn-default btn-sm">Logout</a>
     </div>
 
     <div class="row">
@@ -31,7 +34,14 @@
         </div>
 
     </div>
-
+    {% block footer %}
+        {% include "includes/footer.html" %}
+    {% endblock %}
+    
+    <!--links jquery & bootstrap -->
+    {% block js %}
+        {% include "includes/js1.html" %}
+    {% endblock %}
 </div>
 </body>
 </html>

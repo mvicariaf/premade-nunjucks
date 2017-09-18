@@ -32,7 +32,9 @@
 					</div>
 				</section>
 			</div>
-			
+			{% block profileAside %}
+				{% include "includes/profileAside.html" %}
+			{% endblock %}
 	</div>
 	{% block footer %}
 		{% include "includes/footer.html" %}
