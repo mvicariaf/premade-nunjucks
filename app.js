@@ -14,6 +14,8 @@ var cookieParser = require('cookie-parser');
 var LocalStrategy = require('passport-local').Strategy;
 
 const productCtrl = require('./controllers/profiles')
+const groupCtrl = require('./controllers/groups')
+
 /*var users = require('./routes/users');*/
 
 //configuracion nunjucks
@@ -57,8 +59,14 @@ app.post('/login', productCtrl.login)
 app.get('/login/:name', (req, res) => {
     res.render('loged.html');
 });
+
+app.post('/group', groupCtrl.saveGroup) 
+app.get('/login/:name', (req, res) => {
+    res.render('loged.html');
+});
 //form routes
 app.post('/singup', productCtrl.saveProfile)
+
 app.get('/login/:name/newgroup', (req, res) =>{
     res.render('newgroup.html')
 })
