@@ -1,4 +1,4 @@
-const group = require('../models/group')
+const Group = require('../models/group')
 
 function getGroup (req, res) {
 	let groupId = req.params.groupId
@@ -12,7 +12,7 @@ function getGroup (req, res) {
 }
 
 function getGroup (req, res) {
-	group.find({}, (err, groups) => {
+	Group.find({}, (err, groups) => {
 		if (err) return res.status(500).send({message: `Error al realizar la petición: ${err}`})
 		if (!groups) return res.status(404).send({message: `No existen grupos`})
 	
@@ -24,14 +24,12 @@ function saveGroup (req, res) {
 	console.log('POST  /api/group')
 	console.log(req.body)
 
-	let group = new group()
+	let group = new Group()
 
-	group.name     = req.body.name
-	group.email    = req.body.email
-	group.password = req.body.password
 	group.game     = req.body.game
-	group.place    = req.body.place
-	group.bio      = req.body.bio
+	group.owner     = req.body.owner
+	group.schedule = req.body.schedule
+	group.type = req.body.type
 
 	group.save((err, groupStored) => {
 		if (err) res.status(500).send({message: `Error al salvar en la base de datos ${err}`})

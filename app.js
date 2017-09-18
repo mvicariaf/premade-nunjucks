@@ -51,16 +51,16 @@ app.get('/', (req, res) => {
 app.get('/singup', (req, res) => {
     res.render('singup.html');
 });
-
-app.get('/lol', (req, res) => {
-    res.render('lol.html');
+app.get('/groups', (req, res) => {
+    res.render('newgroup.html');
 });
+
 app.post('/login', productCtrl.login) 
 app.get('/login/:name', (req, res) => {
     res.render('loged.html');
 });
 
-app.post('/group', groupCtrl.saveGroup) 
+app.post('/groups', groupCtrl.saveGroup) 
 app.get('/login/:name', (req, res) => {
     res.render('loged.html');
 });
@@ -70,9 +70,37 @@ app.post('/singup', productCtrl.saveProfile)
 app.get('/login/:name/newgroup', (req, res) =>{
     res.render('newgroup.html')
 })
+
+//games routes
+
 app.get('/login/:name/lol', (req, res) =>{
     res.render('lol1.html')
 })
-
+app.get('/lol', (req, res) => {
+    res.render('lol.html');
+});
+app.get('/login/:name/wow', (req, res) =>{
+    res.render('wow1.html')
+})
+app.get('/wow', (req, res) => {
+    res.render('wow.html');
+});
+app.get('/login/:name/ow', (req, res) =>{
+    res.render('ow1.html')
+})
+app.get('/ow', (req, res) => {
+    res.render('ow.html');
+});
+app.get('/login/:name/dota', (req, res) =>{
+    res.render('dota1.html')
+})
+app.get('/dota', (req, res) => {
+    res.render('dota.html');
+});
+app.get('/login/:name/sc', (req, res) =>{
+    res.render('sc1.html')
+})
+app.get('/sc', (req, res) => {
+    res.render('sc.html');
+});
 module.exports = app
-

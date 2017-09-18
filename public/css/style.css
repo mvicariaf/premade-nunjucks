@@ -10,7 +10,7 @@ body{
 	position: relative;
 	background-color: #162C44;
 	height: -webkit-fill-available;
-	
+	margin-bottom: 50px;
 }
 #mail-loged{
 	width: 1070px;
@@ -38,6 +38,8 @@ body{
 }
 #grupos{
 	margin-top: 50px;
+	margin-bottom: 66px;
+    height: fit-content;
 }
 
 .imgNavBar{
