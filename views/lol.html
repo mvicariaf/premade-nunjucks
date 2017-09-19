@@ -8,19 +8,20 @@
 	{% endblock %}
 </head>
 <body>
-	<div id="main">
+	
 			{% block header %}
 				{% include "includes/header.html" %}
 			{% endblock %}
 			
-			<section id="grupos">
-					<div class="list-group col-11">
+	<div id="main" class="container-fluid">
+		<div class="container row" id="center">
+			<section class="col-8" id="gropos">
+				<div class="list-group">
 					 
-					</div>
-				</section>
-
-			
-			
+					
+				</div>
+			</section>
+		</div>
 	</div>
 	{% block footer %}
 		{% include "includes/footer.html" %}

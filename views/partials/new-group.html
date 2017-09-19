@@ -1,0 +1,10 @@
+<button href="/login/'+ nickname +"'/lol" class="">Nuevo grupo</button>
+
+<button type="submit" class="btn btn-warning btn-lg">Singup</button>
+
+<script>
+		var nickname = window.location.href.split('/')[4];
+		var str = "<a class='nav-link' href='/login/"+nickname+"/lol'><img class='imgNavBar' src='../../images/lol-logo.png'><br>League of Legends</a>";
+
+			document.getElementById('lol').innerHTML = str;
+			</script>

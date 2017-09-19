@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sing up</title>
-    {% block css %}
+    <title>Home</title>
+     {% block css %}
         {% include "includes/css.html" %}
     {% endblock %}
+    
 </head>
 <body>
-    <div id="main-singup">
+    
+        <div id="main-singup">
         <div id="center-signup" class=" no-padding">
             
              <h1><span class="fa fa-sign-in"></span> Signup</h1>
@@ -47,16 +49,15 @@
     <hr>
 
     <p>Already have an account? <a href="/login">Login</a></p>
-    <p>Or go <a href="/">home</a>.</p>
         </div>
-    </div>  
+    </div> 
     {% block footer %}
         {% include "includes/footer.html" %}
     {% endblock %}
     
     <!--links jquery & bootstrap -->
     {% block js %}
-        {% include "includes/js.html" %}
+        {% include "includes/js1.html" %}
     {% endblock %}
 </body>
 </html>
