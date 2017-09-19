@@ -80,27 +80,27 @@ app.get('/lol', (req, res) => {
     res.render('lol.html');
 });
 app.get('/login/:name/wow', (req, res) =>{
-    res.render('wow1.html')
+    res.render('lol1.html')
 })
 app.get('/wow', (req, res) => {
-    res.render('wow.html');
+    res.render('lol.html');
 });
 app.get('/login/:name/ow', (req, res) =>{
-    res.render('ow1.html')
+    res.render('lol1.html')
 })
 app.get('/ow', (req, res) => {
-    res.render('ow.html');
+    res.render('lol.html');
 });
 app.get('/login/:name/dota', (req, res) =>{
-    res.render('dota1.html')
+    res.render('lol1.html')
 })
 app.get('/dota', (req, res) => {
-    res.render('dota.html');
+    res.render('lol.html');
 });
 app.get('/login/:name/sc', (req, res) =>{
-    res.render('sc1.html')
+    res.render('lol1.html')
 })
-app.get('/sc', (req, res) => {
-    res.render('sc.html');
+app.get('/sc2', (req, res) => {
+    res.render('lol.html');
 });
 module.exports = app

@@ -1,6 +1,6 @@
 $.get('http://localhost:3000/api/groups', function (response){  
 	 	console.log(response)
-		var currentGame = window.location.href.split('/')[3];
+		var currentGame = window.location.href.split('/')[5];
 		if (currentGame == "lol")
 			currentGame = "league of legends"
 		if (currentGame == "wow")
