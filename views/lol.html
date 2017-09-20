@@ -13,7 +13,7 @@
 				{% include "includes/header.html" %}
 			{% endblock %}
 			
-	<div id="main" class="container-fluid">
+	<div id="main" class="container">
 		<div class="container row" id="center">
 			<section class="col-8" id="gropos">
 				<div class="list-group">
@@ -22,6 +22,9 @@
 				</div>
 			</section>
 		</div>
+		{% block loggin %}
+			{% include "partials/loggin.html" %}
+		{% endblock %}
 	</div>
 	{% block footer %}
 		{% include "includes/footer.html" %}

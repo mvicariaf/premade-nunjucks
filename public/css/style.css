@@ -31,7 +31,7 @@ body{
 .nav-item{
 	height: 90px;
 	width: 20%;
-	box-shadow: 0 4px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0 4px 6px 0px rgba(0,0,0,0.5);
 	font-size: 14px;
 }
 .navbar-brand{
@@ -112,9 +112,9 @@ footer {
 	bottom: 0;
 	width: 100%;
 }
-footer.container-fluid{
+/*footer.container-fluid{
 	position: absolute;
-}
+}*/
  .bottom_ul { 
  	list-style-type:none; 
  	float:right; 

@@ -64,6 +64,16 @@ function deleteGroup (req, res) {
 	})
 }
 
+function addUserGroup (req, res) {
+	let update = req.body.user
+	let groupId = "59bfcfd79156ff30b07225b4"
+
+	Group.update(
+		{ _id: groupId }, 
+		{ $push: { users: update } }
+			);
+	 		
+}
 
 module.exports = {
 	
@@ -72,5 +82,5 @@ module.exports = {
 	saveGroup,
 	updateGroup,
 	deleteGroup,
-	
+	addUserGroup
 }
