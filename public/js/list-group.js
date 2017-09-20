@@ -13,9 +13,13 @@ $.get('http://localhost:3000/api/group', function (response){
 	 	for (var i = 0; i < response.groups.length; i++) {
 	 	
 	 		if (response.groups[i].game == currentGame)
-	 		$('.list-group').append("<p class='list-group-item'>Propietario del grupo: "+response.groups[i].owner+"<br> Horario: "+response.groups[i].schedule +"<br> modalidad: "+response.groups[i].type +"");
+	 		$('.list-group').append("<p class='list-group-item'>Propietario del grupo: "+response.groups[i].owner+"<br> Horario: "+response.groups[i].schedule +"<br> modalidad: "+response.groups[i].type +
+	 			"" 
+
+	 			);
 	 		
 	 		
 	 	};
+
 
 	});
