@@ -1,4 +1,4 @@
-$.get('http://localhost:3000/api/groups', function (response){  
+$.get('http://localhost:3000/api/group', function (response){  
 	 	console.log(response)
 		var currentGame = window.location.href.split('/')[3];
 		if (currentGame == "lol")

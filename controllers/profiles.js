@@ -13,7 +13,7 @@ function getProfile (req, res) {
 	})
 }
 
-function getProfile (req, res) {
+function getProfiles (req, res) {
 	Profile.find({}, (err, profiles) => {
 		if (err) return res.status(500).send({message: `Error al realizar la petición: ${err}`})
 		if (!profiles) return res.status(404).send({message: `No existen perfil`})
@@ -84,7 +84,7 @@ function login (req, res){
 module.exports = {
 	
 	getProfile,
-	getProfile,
+	getProfiles,
 	saveProfile,
 	updateProfile,
 	deleteProfile,

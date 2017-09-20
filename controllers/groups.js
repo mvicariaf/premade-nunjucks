@@ -3,7 +3,7 @@ const Group = require('../models/group')
 function getGroup (req, res) {
 	let groupId = req.params.groupId
 
-	group.findById(groupId, (err, group) =>{
+	Group.findById(groupId, (err, group) =>{
 		if (err) return res.status(500).send({message: `Error al realizar la petición: ${err}`})
 		if (!group) return res.status(404).send({message: `El grupo no existe`})
 
@@ -11,7 +11,7 @@ function getGroup (req, res) {
 	})
 }
 
-function getGroup (req, res) {
+function getGroups (req, res) {
 	Group.find({}, (err, groups) => {
 		if (err) return res.status(500).send({message: `Error al realizar la petición: ${err}`})
 		if (!groups) return res.status(404).send({message: `No existen grupos`})
@@ -68,7 +68,7 @@ function deleteGroup (req, res) {
 module.exports = {
 	
 	getGroup,
-	getGroup,
+	getGroups,
 	saveGroup,
 	updateGroup,
 	deleteGroup,
