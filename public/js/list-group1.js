@@ -1,6 +1,6 @@
 
 /*const Group = require('../../models/group')*/
-var newUser =  window.location.href.split('/')[5]
+var newUser =  window.location.href.split('/')[4]
 $.get('http://localhost:3000/api/group', function (response){  
 	 	console.log(response)
 		var currentGame = window.location.href.split('/')[5];
@@ -17,17 +17,22 @@ $.get('http://localhost:3000/api/group', function (response){
 	 	
 	 		if (response.groups[i].game == currentGame){
 	 		$('.list-group').append("<p class='list-group-item'>Propietario del grupo: "+response.groups[i].owner+"<br> Horario: "+response.groups[i].schedule +"<br> modalidad: "+response.groups[i].type +"<br> Id: "+response.groups[i]._id+
-	 			" <button type='submit' class='btn rounded-btn'><i class='fa fa-user-plus' aria-hidden='false'></i></button></p>" );
-/*	 		var groupId = response.groups[i]._id;
+	 			" <button type='submit' class='btn rounded-btn' value='"+response.groups[i]._id+"'><i class='fa fa-user-plus' aria-hidden='false'></i></button></p>" );
+	 		
+		 	};
 
-		 	$('.rounded-btn').on('click', 
+	 }
+	 	
+	 	$('.rounded-btn').on('click', 
 				function (event) {
+					var groupId = $('.rounded-btn').val();
 				    event.preventDefault();
+				    console.log(groupId)
 					var data = {user: newUser, groupId: groupId}
-
+					console.log(data)
 				        $.ajax({
 				            type: 'POST',
-				            data: newUser,
+				            data: data,
 				            url: '/login/adduser',
 				            dataType: 'JSON'
 				        }).done(function( response ) {
@@ -42,10 +47,7 @@ $.get('http://localhost:3000/api/group', function (response){
 
 				            }
 				        });
-				    });	*/
-		 	};
-
-	 }
+				    });	
 });
 	
 
