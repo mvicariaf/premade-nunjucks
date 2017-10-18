@@ -27,23 +27,23 @@ $.get('http://localhost:3000/api/group', function (response){
 				function (event) {
 					var groupId = $('.rounded-btn').val();
 				    event.preventDefault();
-				    console.log(groupId)
-					var data = {user: newUser, groupId: groupId}
-					console.log(data)
+				    
+					/*var data = {user: newUser, groupId: groupId}*/
+					
 				        $.ajax({
 				            type: 'POST',
-				            data: data,
-				            url: '/login/adduser',
+				            data: newUser,
+				            url: '/adduserGroup',
 				            dataType: 'JSON'
 				        }).done(function( response ) {
 
 				            if (response.msg === '') {
 
-				            	console.log("exito")
+				            	console.log("fallo")
 				            }
 				            else {
 
-				                alert('Error: ' + response.msg);
+				                alert('Te has inscrito correctamente');
 
 				            }
 				        });

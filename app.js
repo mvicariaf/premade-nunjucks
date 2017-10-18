@@ -71,7 +71,7 @@ app.get('/login/:name/newgroup', (req, res) =>{
     res.render('newgroup.html')
 })
 
-app.post('/login/adduser', groupCtrl.addUserGroup)
+app.post('/adduser', groupCtrl.addUserGroup)
 //games routes
 
 app.get('/login/:name/lol', (req, res) =>{

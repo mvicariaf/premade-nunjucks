@@ -66,10 +66,10 @@ function deleteGroup (req, res) {
 
 function addUserGroup (req, res) {
 	let update = req.body.user
-	let groupId = req.body.groupId
+	let groupId = ObjectId(req.body.groupId)
 	console.log(update)
 	console.log(groupId)
-/*	Group.findOne({_id: groupId }, function(err,group){
+	Group.findOne({_id: groupId }, function(err,group){
 		var usersInGroup = group.users;
 		usersInGroup.push(update);
 		if (err) return res.status(500).send({message: `Error al añadir usuario`})
@@ -79,14 +79,8 @@ function addUserGroup (req, res) {
 			res.status(200).send({users: usersInGroup})
 			});
 		})
-	}*/
-	Group.update(
-		{ _id: groupId }, 
-		{ $push: { users: update } }
-			);
-	 		
-}
-
+	}
+	
 module.exports = {
 	
 	getGroup,
